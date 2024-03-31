@@ -82,8 +82,6 @@ const Pokemones = () => {
                                 </li>
                             ))}
                         </ul>
-
-                        {/* revisar mas detalles */}
                     </div>
 
                 </div>
