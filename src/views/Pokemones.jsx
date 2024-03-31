@@ -57,7 +57,7 @@ const Pokemones = () => {
     return (
         <div className="boxPokemon">
             <h2>Selecciona un Pokémon</h2>
-            <select onChange={handleSelectPokemon}>
+            <select onChange={handleSelectPokemon} className="optionPokemon">
                 <option value="">Pokemones</option>
                 {pokemones.map((pokemon, index) => (
                     <option key={index} value={pokemon.name}>
@@ -65,18 +65,27 @@ const Pokemones = () => {
                     </option>
                 ))}
             </select>
-            <button onClick={handleViewDetail} disabled={loading}>
+            <button onClick={handleViewDetail} disabled={loading} className="btnDetalle">
                 Ver Detalle
             </button>
             {loading && <p>Cargando...</p>}
             {/* Mostrar imagen y características del Pokémon */}
             {pokemonDetails && (
-                <div>
-                    <img src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
-                    <h1>{pokemonDetails.name}</h1>
-                    <p>Weight: {pokemonDetails.weight}</p>
-                    <p>Height: {pokemonDetails.height}</p>
-                    {/* revisar mas detalles */}
+                <div className="cardPokemon">
+                    <img src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} className="imgPokemon"/>
+                    <div className="caracteristicasPokemon">
+                        <h4>{pokemonDetails.name}</h4>
+                        <ul className="estadisticasPokemon">
+                            {pokemonDetails.stats.map((stat, index) => (
+                                <li key={index} className="liEstadisticasPokemon">
+                                    {stat.stat.name}: {stat.base_stat}
+                                </li>
+                            ))}
+                        </ul>
+
+                        {/* revisar mas detalles */}
+                    </div>
+
                 </div>
             )}
         </div>

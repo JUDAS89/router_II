@@ -59,3 +59,24 @@
     background-color: black;
     color: white;
 }
+
+
+.cardPokemon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: lightgray;
+    width: 300px;
+
+}
+
+
+.liEstadisticasPokemon{
+    font-size: small; 
+    text-align: left;
+}
