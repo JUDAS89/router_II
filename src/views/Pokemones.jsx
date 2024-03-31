@@ -5,6 +5,7 @@ import { usePokemon } from "../context/PokemonContext";
 const Pokemones = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    console.log(navigate);
     const { pokemonDetails, setPokemonDetails } = usePokemon();
     const [pokemones, setPokemones] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState(null);
