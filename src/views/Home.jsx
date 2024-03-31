@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import presentacionImage from "../assets/He.webp"
 
 const Home = () => {

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar"
 import Home from './views/Home'
+import Pokemones from './views/Pokemones'
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
+          <Route path="/pokemones" element={<Pokemones />}/>
         </Routes>
       </BrowserRouter>
     </div>

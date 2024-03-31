@@ -80,3 +80,6 @@ button:focus-visible {
   font-weight: bold;
 }
 
+.inactive {
+  color: white;
+}

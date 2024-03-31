@@ -3,7 +3,7 @@ import logo from "../assets/logo3.png"
 import "../style.css"
 
 export default function Navbar(){
-    const setActiveClass = ({ isActive }) => (isActive ? "active": undefined)
+    const setActiveClass = ({ isActive }) => (isActive ? "active": "inactive")
 
     return (
         <div className="navbar">
